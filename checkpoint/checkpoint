@@ -1,0 +1,2 @@
+model_checkpoint_path: "UNet_small_BCE_Oversampling_Vers.8_"
+all_model_checkpoint_paths: "UNet_small_BCE_Oversampling_Vers.8_"
