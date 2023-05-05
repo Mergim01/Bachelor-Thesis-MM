@@ -1,14 +1,31 @@
-# Bachelor-Thesis-MM
+# Deep Learning Approach to Detect Photovoltaic Arrays in Aerial Images
 
-Create data set for training:
-First the raster data has to be loaded in data TIFs.
-Then in the folder TIFs the notebook 10240Tif_to_256Array.ipynb need to run
-This notebook makes all the tif data to numpys of shape(n,256,256,3) for the images and (n,256,256) and stores them in the folder np
-this folder has to be moved in the data folder then
-the numpy array then is gonna be shuffled and splitted into a training array and a validation array with the notebook: 10240Tif_to_256Array.ipynb
-Afterward, pngs are generated out of the numpy arrays with the notebook numpy to png.ipynb
-Finally, the notebook Oversampling.ipynb oversmaples the training set
+This repository contains the code and resources for the bachelor thesis on "A Deep Learning Approach to Detect Photovoltaic Arrays in Aerial Images" by [Your Name], submitted for the Bachelor's degree in [Your Degree Program] at [Your University].
 
-after crating the data set the U-Net model cann be created and trained in the notebook: U-Net
+## Project Overview
 
-the evaluation takes place in the notebook evaluation
+The aim of this project was to develop a deep learning model to detect photovoltaic (PV) arrays in aerial images of Denmark, using a semantic segmentation approach called U-Net. The project involved labeling the PV arrays on satellite data of Denmark with QGIS, and then training the U-Net model to identify PV arrays in aerial images. The Dice Loss was used as the loss function, and the performance of the model was evaluated with the Intersection over Union (IoU) metric.
+
+## Repository Structure
+
+The repository is organized as follows:
+
+
+### Usage
+
+1. Download the dataset (aerial images and corresponding masks) and place them in the `data` directory.
+
+2. Run the Jupyter notebooks in the `notebooks` directory in the following order:
+
+    - `data_preparation.ipynb`: Prepare the dataset for training and validation.
+    - `model_training.ipynb`: Train the U-Net model on the prepared dataset.
+    - `model_evaluation.ipynb`: Evaluate the performance of the trained model on the test dataset.
+
+3. Alternatively, you can run the scripts in the `src` directory to train and evaluate the model:
+
+    - `train.py`: Train the U-Net model on the prepared dataset.
+    - `predict.py`: Use the trained model to predict PV arrays in new aerial images.
+
+## Acknowledgements
+
+We would like to thank the [Name of Dataset Provider] for providing the dataset used in this project. We also acknowledge the support and guidance of our supervisor [Supervisor Name].
